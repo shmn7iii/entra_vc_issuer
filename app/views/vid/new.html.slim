@@ -1,0 +1,12 @@
+.card.card-body.mx-auto[style="width: 600px;"]
+  = form_with(url: vid_index_path, local: true) do |f|
+    .mb-3
+      = f.label :first_name, class: "form-label fw-bold"
+      = f.text_field :first_name, class: 'form-control', placeholder: "First name"
+
+    .mb-3
+      = f.label :last_name, class: "form-label fw-bold"
+      = f.text_field :last_name, class: 'form-control', placeholder: "Last name"
+
+    .text-center
+      = f.submit "Issue Verified ID", class: "btn btn-primary"
