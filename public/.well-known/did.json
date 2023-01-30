@@ -1,1 +1,48 @@
-{"id":"did:web:verified-id-sample.onrender.com","@context":["https://www.w3.org/ns/did/v1",{"@base":"did:web:verified-id-sample.onrender.com"}],"service":[{"id":"#linkeddomains","type":"LinkedDomains","serviceEndpoint":{"origins":["https://verified-id-sample.onrender.com/"]}},{"id":"#hub","type":"IdentityHub","serviceEndpoint":{"instances":["https://hub.did.msidentity.com/v1.0/bb260cf0-dc57-4831-b0ab-8afdc56595e0"]}}],"verificationMethod":[{"id":"#1ecba061fae949de9143a43dfef39296vcSigningKey-f191b","controller":"did:web:verified-id-sample.onrender.com","type":"EcdsaSecp256k1VerificationKey2019","publicKeyJwk":{"crv":"secp256k1","kty":"EC","x":"PI370rUPj3jhWF0zT7B6QAgyh-l5J6TOSAKcVkTbmXE","y":"-M_r3RE0aW4UU1GqUCxURadeRdcwNO2zqLxwzj_47-Q"}}],"authentication":["#1ecba061fae949de9143a43dfef39296vcSigningKey-f191b"],"assertionMethod":["#1ecba061fae949de9143a43dfef39296vcSigningKey-f191b"]}
+{
+  "id": "did:web:entra-vid-issuer.onrender.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:entra-vid-issuer.onrender.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://entra-vid-issuer.onrender.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/bb260cf0-dc57-4831-b0ab-8afdc56595e0"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#91e9e8da72bd41f2ae2d728178d37f1bvcSigningKey-e9062",
+      "controller": "did:web:entra-vid-issuer.onrender.com",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "e9D8OgtkOvUZK6uqQXcchCCLizh0TB3ne4WaemP_fHY",
+        "y": "MgKd8qe9EYHOA5bzRLaP2TBnGy4QbBlGWh32jn8PdeA"
+      }
+    }
+  ],
+  "authentication": [
+    "#91e9e8da72bd41f2ae2d728178d37f1bvcSigningKey-e9062"
+  ],
+  "assertionMethod": [
+    "#91e9e8da72bd41f2ae2d728178d37f1bvcSigningKey-e9062"
+  ]
+}
