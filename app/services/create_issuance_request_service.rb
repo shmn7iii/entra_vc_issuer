@@ -28,17 +28,17 @@ class CreateIssuanceRequestService < BaseService
     data = {
       "includeQRCode": true,
       "callback": {
-        "url": 'https://verified-id-sample.onrender.com/callback',
+        "url": 'https://entra-vid-issuer.onrender.com/callback',
         "state": 'Create',
         "headers": {
           "api-key": 'hoge-key'
         }
       },
-      "authority": 'did:web:verified-id-sample.onrender.com',
+      "authority": 'did:web:entra-vid-issuer.onrender.com',
       "registration": {
-        "clientName": 'Verified ID App'
+        "clientName": 'entra_vid_issuer'
       },
-      "type": 'VerifiedCredentialExpert',
+      "type": 'VerifiedCredentialSampleFeb2023',
       "manifest": @manifest,
       "claims": {
         "id": @id,
