@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root 'vid#new'
+  root 'credentials#new'
 
-  resources :vid, only: %i[new create show]
+  resources :credentials, only: %i[new create]
+  get '/credentials/result', to: 'credentials#result'
   post '/callback', to: 'application#callback'
 end

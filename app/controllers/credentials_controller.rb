@@ -1,4 +1,4 @@
-class VidController < ApplicationController
+class CredentialsController < ApplicationController
   def new; end
 
   def create
@@ -7,10 +7,10 @@ class VidController < ApplicationController
 
     qr_code_base64 = CreateIssuanceRequestService.call(first_name:, last_name:)
 
-    redirect_to vid_path(qr_code_base64)
+    redirect_to credentials_result_path(qr: qr_code_base64)
   end
 
-  def show
-    @qr_code_base64 = params[:id]
+  def result
+    @qr_code_base64 = params[:qr]
   end
 end
