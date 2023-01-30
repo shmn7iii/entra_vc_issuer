@@ -23,5 +23,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dotenv-rails'
+  gem 'pry-rails'
   gem 'web-console'
 end
