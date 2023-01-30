@@ -1,9 +1,11 @@
-header.p-3.mb-3.border-bottom
+header.p-2.mb-5.border-bottom
   div.d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-start
-    = link_to "VID ISSUER", root_path, class: "d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none fs-4 fw-bold"
-    ul.nav.col-12.col-lg-auto.me-lg-auto.mb-2.justify-content-center.mb-md-0
+    = link_to "VID ISSUER", root_path, class: "d-flex align-items-center ps-3 mb-2 mb-lg-0 text-dark text-decoration-none fs-4 fw-bold"
+    ul.nav.col-12.col-lg-auto.me-lg-auto.mb-2.justify-content-center.mb-md-0.ps-3
       li
         = link_to "did.json", '/.well-known/did.json', class: "nav-link px-2 link-secondary"
+      li
+        = link_to "did-configuration.json", '/.well-known/did-configuration.json', class: "nav-link px-2 link-secondary"
 
     div.text-end
       a[href="https://github.com/shmn7iii/entra_vid_issuer", class="nav-link px-2 link-dark"]
