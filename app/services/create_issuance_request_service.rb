@@ -9,7 +9,6 @@ class CreateIssuanceRequestService < BaseService
     @id = id || SecureRandom.uuid
     @first_name = first_name
     @last_name = last_name
-    @manifest = ENV['manifest']
 
     super()
   end
@@ -28,18 +27,18 @@ class CreateIssuanceRequestService < BaseService
     data = {
       "includeQRCode": true,
       "callback": {
-        "url": 'https://entra-vid-issuer.onrender.com/callback',
+        "url": ENV['callback_url'],
         "state": 'Create',
         "headers": {
-          "api-key": 'hoge-key'
+          "api-key": 'hogehoge'
         }
       },
-      "authority": 'did:web:entra-vid-issuer.onrender.com',
+      "authority": ENV['did'],
       "registration": {
-        "clientName": 'entra_vid_issuer'
+        "clientName": ENV['client_name']
       },
-      "type": 'VerifiedCredentialSampleFeb2023',
-      "manifest": @manifest,
+      "type": ENV['credential_type'],
+      "manifest": ENV['manifest'],
       "claims": {
         "id": @id,
         "given_name": @first_name,
